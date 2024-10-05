@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8104276857242257"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Partner's Skill Challenge</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="resultContainer"></div>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="./assets/videos/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="./assets/images/header-logo.png" alt="Logo">
+        </a>
+        <nav>
+            <!-- Hamburger Menu -->
+            <div class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Dare</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="gameInstructionsPopup" class="popup1">
+        <div class="popup-content1">
+          <span id="closePopup1" class="close1">&times;</span>
+          <div class="popup-header1">
+            <h2>💦 How to Play the Flower Click Game 💦</h2>
+          </div>
+          <div class="popup-body1">
+            <p><strong>Welcome to the game. Please read the following instructions carefully before proceeding.</strong></p>
+            <p><span class="highlight">Objective</span>: <strong>Click on the flower to score points! The goal is to score as many points as possible before time runs out.</p>
+            <p><span class="highlight">Starting the Game:</span>Click the "Start Game" button to begin. You will have a limited amount of time to play.</p>
+            <p><span class="highlight">Scoring Points:</span>Each time you click on the flower, you earn points. Your score is displayed at the top of the screen.</p>
+            <p><span class="highlight">End of Game:</span>The game ends when the timer reaches zero. Your final score will be displayed, and you can choose to play again.</p>
+            <p><span class="highlight">Tips:</span>Try to click as quickly as possible to maximize your score!
+                Pay attention to the timer; you don’t want to run out of time!</p>
+            <p>Have Fun!:Enjoy the game and challenge your friends to beat your score!</p>
+        
+          </div>
+          <div class="popup-footer1">
+            <button id="acceptButton1" class="popup-button1">OK</button>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- Main Content -->
+    <div class="game-container">
+        <!-- Timer Selection Options -->
+        <div class="timer-options">
+            <label for="timerSelect">Pleasure Time:</label>
+            <select id="timerSelect">
+                <option value="3">3 seconds</option>
+                <option value="5" selected>5 seconds</option>
+                <option value="10">10 seconds</option>
+                <option value="15">15 seconds</option>
+            </select>
+        </div>
+        
+        <!-- Start Button -->
+        <button id="startButton">Start Teasing</button>
+
+        <!-- Info Boxes for Timer, Click Speed, and Score -->
+        <div id="timer" class="info-box">Timer: <span id="timerValue">00</span></div>
+        <div id="clickSpeed" class="info-box">Click/sec: <span id="clickSpeedValue">00</span></div>
+        <div id="score" class="info-box">Score: <span id="scoreValue">00</span></div>
+        
+        <!-- Flower Container -->
+<div class="flower-container">
+    <img id="flowerImage" src="./assets/images/vagina.png" alt="Flower" class="flower">
+</div>
+
+<!-- Droplet Container -->
+<div id="dropletContainer"></div>
+
+
+        <!-- Popup Section -->
+        <div id="newPopup" class="popup">
+            <div class="popup-content">
+                <img src="./assets/images/octopus.png" id="popupResultImage" alt="Result Image" class="popup-image">
+                <h2 id="popupTitle">You're an Octopus!</h2>
+                <p id="popupText">Well.. You Clicked with the speed of <strong id="popupCPS">6CPS</strong>.<br> You made <strong id="popupClicks">30 Clicks</strong> in <strong id="popupTime">5 Seconds</strong></p>
+                
+                <p>Play again to get a appreciation</p>
+                <div id="popupAnimals" class="popup-animals">
+                    <img src="./assets/images/turtle.png" id="turtleImage" alt="Turtle" class="popup-animal">
+                    <img src="./assets/images/octopus.png" id="octopusImage" alt="Octopus" class="popup-animal">
+                    <img src="./assets/images/cheetah.png" id="cheetahImage" alt="Cheetah" class="popup-animal">
+                    <img src="./assets/images/rabbit.png" id="rabbitImage" alt="Rabbit" class="popup-animal">
+                </div>
+                <p>Challenge Your Friends to Beat Your Score</p>
+                <div class="popup-share-icons">
+                    <button id="shareWhatsApp"><i class="fab fa-whatsapp"></i> </button>
+                    <button id="shareInstagram"></button>
+                </div>
+                <button id="closeNewPopup" class="close-popup">Playagain</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Audio Element -->
+    <audio id="clickSound" src="./assets/sounds/sound-for-click.mp3"></audio>
+
+    <!-- JavaScript -->
+    <script src="script2.js"></script>
+</body>
+</html>

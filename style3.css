@@ -1,0 +1,305 @@
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cloud-Shaped Text Box */
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    text-align: center;
+}
+
+.cloud-box {
+    background: #fff;
+    padding: 40px;
+    max-width: 800px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+strong {
+    color: #222;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+    .cloud-box {
+        padding: 30px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cloud-box {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cloud-box {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+        
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure that elements use full width on small devices */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Add flexibility to the layout for smaller screens */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    color: rgb(0, 0, 0);
+    position: fixed; /* Fixed header */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure header is above video */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Logo Styling */
+  header img {
+    height: 60px;
+    width: auto;
+  }
+  
+  /* Navigation Styling */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between navigation links */
+    margin: 0;
+    padding-right: 60px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.125rem; /* 18px */
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 600; /* Semi-bold */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: rgb(160, 146, 155); /* Active link color */
+    transform: scale(1.05); /* Slight enlargement on hover */
+    border-bottom: 2px solid rgb(153, 49, 116); /* Underline active link */
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Adjustments */
+  
+  /* Mobile Styles */
+  @media (max-width: 599px) {
+    header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center;
+        padding: 10px;
+    }
+  
+    nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav ul.active {
+        display: flex;
+    }
+  
+    nav ul li {
+        margin: 10px 0;
+    }
+  
+    nav ul li a {
+        font-size: 1rem; /* 16px */
+    }
+  
+    header img {
+        height: 50px; /* Smaller logo for mobile */
+        margin-bottom: 10px;
+    }
+  
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 600px) and (max-width: 899px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+  
+    nav ul {
+        gap: 20px;
+    }
+  
+    nav ul li a {
+        font-size: 1.125rem; /* 18px */
+    }
+  
+    header img {
+        height: 60px;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 900px) {
+    header {
+        padding: 15px 50px;
+    }
+  
+    nav ul {
+        gap: 30px;
+    }
+  
+    nav ul li a {
+        font-size: 1.25rem; /* 20px */
+    }
+  
+    header img {
+        height: 70px;
+    }
+  }
+  
+  /* Hamburger Animation */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Focus Styles for Navigation Links */
+  nav ul li a:focus {
+    outline: 2px solid rgb(160, 146, 155);
+    outline-offset: 2px;
+  }
+  
+  .small-text {
+      font-size: 0.7em; /* Adjust the size as needed */
+      color: #000000;      /* Optional: change the color for contrast */
+      font-weight: bold;
+  }

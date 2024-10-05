@@ -1,0 +1,403 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;  /* Fix the video to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;  /* Ensure the video is behind the content */
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;  /* Ensure video covers the entire width */
+    min-height: 100%; /* Ensure video covers the entire height */
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);  /* Center the video */
+    object-fit: cover;  /* Ensures the video maintains its aspect ratio */
+    z-index: -1;  /* Keep it behind the content */
+    background-size: cover;  /* Ensure the video scales correctly */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {  /* Adjust for screens smaller than 768px */
+    video {
+        left: 95%;  /* Shift the video slightly to the right */
+        transform: translate(-95%, -50%);  /* Adjust the centering */
+    }
+}
+
+
+/* Body Styling */
+body {
+    background: none; /* Remove the background image */
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent; /* Header remains transparent */
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1; /* Ensure header is above video */
+}
+
+
+header img {
+    height: 80px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 60px;
+    margin-right: 90px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: 'ABeeZee';
+}
+
+
+
+/* Hero Section Styling */
+.hero {
+    height: 90vh; /* Adjust the height of the hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1; /* Ensure hero section is above video */
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    font-family: 'Lily Script One';
+}
+
+p {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Abyssinica SIL';
+}
+
+button {
+    font-size: 30px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #C9358E; /* Magenta, adjust the color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'League Gothic';
+    margin-bottom: 40px;
+}
+
+button:hover {
+    background-color: #ffffff; /* Darker shade for hover effect */
+    color: black;
+}
+
+/* Popup Styles (Desktop) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the popup */
+    width: 40%; /* Default width on larger screens */
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close-button {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Media Query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 80%; /* Scale popup down for tablets */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px; /* Scale down headers */
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #takeDareButton {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Media Query for mobile phones */
+@media (max-width: 480px) {
+    .popup-content {
+        width: 90%; /* Even smaller for mobile phones */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    #takeDareButton {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .popup-inline-image {
+        width: 40px; /* Smaller image for mobile */
+    }
+}
+
+
+#takeDareButton {
+    padding: 10px 20px;
+    background-color: #D1416A;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 35px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+#takeDareButton:hover{
+    color: black;
+    background-color: lightpink;
+    border-radius: 35px;
+}
+
+/* Popup Header styling */
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+/* Adult and Only text styling */
+.adult-text, .only-text {
+    font-family: 'Lily Script One';
+    font-weight: bold;
+}
+
+/* Image between Adult and Only */
+.popup-inline-image {
+    width: 100px;  /* Adjust the width as needed */
+    height: auto;
+    margin: 0 10px;  /* Space between the words and the image */
+    vertical-align: middle;  /* Aligns the image with the text */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    header img {
+        height: 60px; /* Smaller logo */
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        font-size: 25px; /* Reduce font size for mobile */
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller hero heading */
+    }
+
+    p {
+        font-size: 24px; /* Adjust paragraph size */
+    }
+
+    button {
+        font-size: 20px; /* Smaller button text */
+        padding: 10px 20px; /* Smaller button padding */
+    }
+
+    /* Popup */
+    .popup-content {
+        width: 80%; /* Adjust to fit smaller screens */
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .popup-inline-image {
+        width: 50px; /* Smaller image */
+    }
+
+    /* Adjusting the background video for small screens */
+    video {
+        object-fit: contain; /* Instead of cover, to avoid too much zoom */
+    }
+}
+
+/* For even smaller devices */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .popup-content {
+        width: 90%; /* Further adjust for very small screens */
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .popup-content {
+        width: 35%; /* Restrict width so it's not too wide */
+        padding: 40px; /* Add padding for better spacing */
+        font-size: 1.2rem; /* Increase font size for better readability */
+    }
+
+    h2, h3 {
+        font-size: 2rem; /* Adjust font sizes inside popup for large screens */
+    }
+
+    #takeDareButton {
+        font-size: 1.1rem; /* Ensure buttons are scaled well */
+        padding: 12px 24px; /* Larger button padding */
+    }
+
+    .popup-inline-image {
+        width: 120px; /* Scale the image for large screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .popup-content {
+        width: 50%; /* Increase width to provide more space for content */
+        max-height: 80vh; /* Set a maximum height to prevent overflow */
+        overflow-y: auto; /* Allow scrolling if content exceeds max height */
+        padding: 30px; /* Add sufficient padding */
+        font-size: 1rem; /* Ensure the text is readable */
+    }
+
+    h2 {
+        font-size: 2rem; /* Increase font size for headers */
+    }
+
+    h3 {
+        font-size: 1.4rem; /* Adjust subheading sizes */
+    }
+
+    p {
+        font-size: 1.1rem; /* Increase paragraph font size */
+    }
+
+    #takeDareButton {
+        font-size: 1.2rem; /* Larger font for the button */
+        padding: 12px 24px; /* Adjust padding for larger buttons */
+    }
+
+    .popup-inline-image {
+        width: 100px; /* Adjust image size for better proportions */
+    }
+}
+
